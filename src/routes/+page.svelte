@@ -12,6 +12,5 @@
 <Cover />
 <Letter />
 <Gallery />
-<Calendar />
 <GiftInfo />
 <Location />
