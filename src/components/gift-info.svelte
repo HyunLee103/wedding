@@ -11,7 +11,7 @@
 
 	function copy(text: string) {
 		navigator.clipboard.writeText(text);
-		toast = '계좌번호가 복사되었습니다.';
+		toast = '계좌번호가\n복사되었습니다.';
 		setTimeout(() => (toast = ''), 2000);
 	}
 </script>
@@ -301,9 +301,10 @@ section.gift {
 
 .toast {
 	position: fixed;
-	bottom: 3em;
+	bottom: 6.2em;
 	left: 50%;
 	transform: translateX(-50%);
+	z-index: 50;
 
 	background: rgba(0, 0, 0, 0.85);
 	color: white;
@@ -312,6 +313,9 @@ section.gift {
 	border-radius: 999px;
 
 	font-size: 0.9rem;
+	line-height: 1.45;
+	text-align: center;
+	white-space: pre-line;
 	backdrop-filter: blur(8px);
 }
 
@@ -328,6 +332,10 @@ section.gift {
 	.icon-btn {
 		padding: 0.15em;
 		flex-shrink: 0;
+	}
+
+	.toast {
+		bottom: 6.8em;
 	}
 }
 </style>
