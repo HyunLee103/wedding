@@ -201,6 +201,8 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 0.45rem;
+		position: relative;
+		z-index: 1;
 	}
 
 	p.signature {
@@ -221,7 +223,7 @@
 
 	@media (max-width: 640px) {
 		section.location {
-			padding: 1em 1.25em;
+			padding: 1em 1.25em 3.5em;
 		}
 
 		.location-guide {
