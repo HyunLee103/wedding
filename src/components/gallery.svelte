@@ -72,9 +72,6 @@
 <section class="gallery">
 	<div class="header">
 		<h2 class="title {localeStore.locale}">{$_('gallery.title')}</h2>
-		{#if $_('gallery.sub_title')}
-			<p class="sub-title {localeStore.locale}">{$_('gallery.sub_title')}</p>
-		{/if}
 	</div>
 	<div id="gallery">
 		{#each photos as photo}
@@ -118,19 +115,6 @@
 		font-size: 1.3rem;
 		font-weight: 600;
 		letter-spacing: 1px;
-	}
-	}
-
-	p.sub-title {
-		text-align: center;
-		&.kr {
-		margin-top: 0.9em;
-		font-size: 0.9rem;
-	}
-
-	&.en {
-		margin-top: 0.5em;
-		font-size: 1.2rem;
 	}
 	}
 

@@ -6,8 +6,7 @@
 	import { Clipboard, Github } from '@lucide/svelte';
 	import { PUBLIC_NAVER_MAPS_API_KEY } from '$env/static/public';
 
-	const naverMapUrl = 'https://naver.me/FAPXf05C';
-	const hasNaverMapKey = Boolean(PUBLIC_NAVER_MAPS_API_KEY);
+	const naverMapsKey = PUBLIC_NAVER_MAPS_API_KEY || 'f28bea3kjx';
 
 	function copyAddress() {
 		navigator.clipboard
@@ -17,10 +16,8 @@
 	}
 
 	onMount(() => {
-		if (!hasNaverMapKey) return;
-
 		const script = document.createElement('script');
-		script.src = `https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${PUBLIC_NAVER_MAPS_API_KEY}`;
+		script.src = `https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${naverMapsKey}`;
 		script.async = true;
 
 		script.onload = () => {
@@ -57,13 +54,7 @@
 	</button>
 
 	<div class="map">
-		{#if hasNaverMapKey}
-			<div id="naverMap" class="naver-map"></div>
-		{:else}
-			<a class="naver-map-link" href={naverMapUrl} target="_blank" rel="noreferrer">
-				네이버 지도에서 보기
-			</a>
-		{/if}
+		<div id="naverMap" class="naver-map"></div>
 	</div>
 
 	<p class="signature en">made with ♡ by Yejin & Hyun</p>
@@ -101,20 +92,6 @@
 		height: 100%;
 		border-radius: 8px;
 		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-	}
-
-	.naver-map-link {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-		height: 100%;
-		border-radius: 8px;
-		background: #f4f1ec;
-		color: $primary-color;
-		font-weight: 600;
-		text-decoration: none;
-		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 	}
 
 	p.signature {
