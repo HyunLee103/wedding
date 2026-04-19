@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="45" height="242" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&amp;display=swap');
+      text { font-family: 'Cormorant Garamond', serif; }
+    </style>
+  </defs>
+  
+  <!-- Day of week header -->
+  <text x="22.5" y="20" text-anchor="middle" font-size="17" fill="#7A7A7A" font-weight="400">S</text>
+
+  <!-- Day 2 -->
+  <text x="22.5" y="54" text-anchor="middle" font-size="16" fill="#7A7A7A" font-weight="400">2</text>
+
+  <!-- Day 9 -->
+  <text x="22.5" y="94" text-anchor="middle" font-size="16" fill="#7A7A7A" font-weight="400">9</text>
+
+  <!-- Day 16 -->
+  <text x="22.5" y="134" text-anchor="middle" font-size="16" fill="#7A7A7A" font-weight="400">16</text>
+
+  <!-- Highlighted day 23 -->
+  <circle cx="22.5" cy="169" r="13" fill="#B89B9B"/>
+  <text x="22.5" y="173" text-anchor="middle" font-size="14" fill="#FFFFFF" font-weight="400">23</text>
+  <text x="22.5" y="190" text-anchor="middle" font-size="9" fill="#B89B9B">11pm</text>
+
+  <!-- Day 30 -->
+  <text x="22.5" y="214" text-anchor="middle" font-size="16" fill="#7A7A7A" font-weight="400">30</text>
+</svg>

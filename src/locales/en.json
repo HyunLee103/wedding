@@ -1,0 +1,23 @@
+{
+	"meta": {
+		"title": "Yejin & Hyun's Wedding Day"
+	},
+	"cover": {
+
+		"date": "5.23.2026 Sat. 11:00 am",
+		"place": "Namsan Hannam Wedding Garden, Seoul, South Korea"
+	},
+	"letter": {
+		"date": "5.23.2026",
+		"sub_title": "You're invited to our wedding!",
+		"letter_content": "You've been with us through so many unforgettable moments\nPlease join us for one of the biggest milestones yet! We'd be overjoyed to have you witness and celebrate our wedding as we embark on this new chapter together."
+	},
+	"gallery": {
+		"title": "Gallery",
+		"sub_title": "Click to enlarge the images."
+	},
+	"location": {
+		"title": "Location",
+		"address_copied": "The address is copied!"
+	}
+}
