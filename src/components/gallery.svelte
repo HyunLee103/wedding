@@ -138,7 +138,7 @@
 	}
 
 	.slide:nth-child(4) img.thumbnail {
-		object-position: center 28%;
+		object-position: center 39%;
 	}
 
 	.slide:nth-child(1),
