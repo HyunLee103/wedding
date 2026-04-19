@@ -136,4 +136,20 @@
 			}
 		}
 	}
+
+	img.letter-bottom {
+		display: block;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	@media (min-width: 768px) {
+		img.letter-bottom {
+			max-width: 34rem;
+			width: calc(100% - 6rem);
+			margin: 0 auto 1rem;
+			border-radius: 10px;
+			object-fit: contain;
+		}
+	}
 </style>

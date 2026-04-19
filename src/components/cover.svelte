@@ -1,8 +1,6 @@
 <script lang="ts">
-	import { localeStore } from '../i18n.svelte';
 	import { browser } from '$app/environment';
 	import { Confetti } from 'svelte-confetti';
-	import { _ } from 'svelte-i18n';
 	import coverImage from '$lib/assets/cover.jpg';
 
 	const maxSectionHeight = 900;
@@ -40,17 +38,6 @@
 		<span class="names kr">그리고</span>
 		<span class="names kr">김예진</span>
 	</div>
-
-	<div class="cover-title-container">
-		<div class="names-en-box">
-			<span class="names en-sacramento">Hyun & Yejin</span>
-		</div>
-
-		<div class="event-date-and-place-box">
-			<span class="event-date-and-time {localeStore.locale}">{$_('cover.date')}</span>
-			<span class="event-place {localeStore.locale}">{$_('cover.place')}</span>
-		</div>
-	</div>
 </section>
 
 <style lang="scss">
@@ -71,59 +58,30 @@
 	}
 	.names-kr-box {
 		position: absolute;
-		top: 3em;
-		left: 4em;
+		top: 2.2em;
+		left: 2em;
+		z-index: 1;
 
 		span.names {
-			color: #616161;
+			color: $white;
 			display: block;
 			font-size: 1rem;
-			letter-spacing: 0.8em;
+			font-weight: 500;
+			letter-spacing: 0.45em;
 			line-height: 2;
+			text-shadow: 0 2px 10px rgba(0, 0, 0, 0.28);
 		}
 	}
 
-	.cover-title-container {
-		width: 100%;
-		position: absolute;
-		bottom: 1.5em;
-	}
+	@media (max-width: 640px) {
+		.names-kr-box {
+			top: 2em;
+			left: 1.5em;
 
-	.names-en-box {
-		width: 100%;
-		display: flex;
-		justify-content: center;
-
-		span.names {
-			display: block;
-			color: $white;
-			word-spacing: 5px;
-			font-size: 2.2rem;
-		}
-	}
-
-	.event-date-and-place-box {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-
-		span.event-date-and-time,
-		span.event-place {
-			display: block;
-			color: $white;
-
-			&.kr {
-				font-size: 1rem;
+			span.names {
+				font-size: 0.92rem;
+				letter-spacing: 0.38em;
 			}
-
-			&.en {
-				font-size: 1.4rem;
-			}
-		}
-
-		span.event-date-and-time.kr {
-			margin-bottom: 0.4em;
 		}
 	}
 </style>

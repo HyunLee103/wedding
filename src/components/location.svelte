@@ -28,7 +28,7 @@
 		<iframe
 			class="map-frame"
 			title="남산 한남 웨딩 가든 지도"
-			src="https://maps.google.com/maps?q=%EB%82%A8%EC%82%B0%20%ED%95%9C%EB%82%A8%20%EC%9B%A8%EB%94%A9%20%EA%B0%80%EB%93%A0&t=&z=17&ie=UTF8&iwloc=&output=embed"
+			src="https://map.naver.com/p/entry/place/2145045060?placePath=%2Fhome"
 			loading="lazy"
 			referrerpolicy="no-referrer-when-downgrade"
 		></iframe>
