@@ -72,7 +72,7 @@
 		</div>
 	</div>
 
-	<p class="signature en">made with ♡ by Yejin & Hyun</p>
+	<p class="signature en">Made with ♡ by Yejin & Hyun</p>
 
 	<a
 		class="github-icon"
