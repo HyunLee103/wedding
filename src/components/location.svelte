@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import locationDeco from '$lib/assets/location-deco.svg';
 	import { _ } from 'svelte-i18n';
 	import { localeStore } from '../i18n.svelte';
 	import { Clipboard } from '@lucide/svelte';
@@ -75,8 +74,6 @@
 			<p class="guide-line">예식장 내 ATM이 없어 하얏트 호텔 본관 ATM 이용을 부탁드립니다.</p>
 		</div>
 	</div>
-
-	<img class="location-deco" src={locationDeco} alt="" />
 </section>
 
 <style lang="scss">
@@ -181,12 +178,6 @@
 		margin-top: 0.85rem;
 		padding-top: 0.85rem;
 		border-top: 1px solid rgba(185, 148, 147, 0.24);
-	}
-
-	img.location-deco {
-		position: absolute;
-		bottom: 2.3em;
-		right: 1.5em;
 	}
 
 	@media (max-width: 640px) {
