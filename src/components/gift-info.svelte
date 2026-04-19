@@ -11,7 +11,7 @@
 
 	function copy(text: string) {
 		navigator.clipboard.writeText(text);
-		toast = '계좌번호가 복사되었습니다';
+		toast = '계좌 번호가 복사되었습니다.';
 		setTimeout(() => (toast = ''), 2000);
 	}
 </script>

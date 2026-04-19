@@ -59,7 +59,7 @@
 
 	<div class="location-guide kr">
 		<p class="guide-line">
-			예식장 내 주차 공간이 마련되어 있지 않아 대중교통 이용 부탁드립니다.
+			예식장 내 주차 공간이 마련되어 있지 않아 대중교통 이용을 부탁드립니다.
 		</p>
 		<p class="guide-line"><strong>셔틀</strong> 한강진역 2번 출구 앞 탑승</p>
 		<div class="parking-list">
