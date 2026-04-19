@@ -76,17 +76,19 @@
 		</div>
 	</div>
 
-	<p class="signature en">Made with ♡ by Yejin & Hyun</p>
-
-	<a
-		class="github-icon"
-		href="https://github.com/HyunLee103/wedding"
-		target="_blank"
-	>
-		<Github size="1.1em" strokeWidth={1} />
-	</a>
-
 	<img class="location-deco" src={locationDeco} alt="" />
+
+	<div class="location-footer">
+		<a
+			class="github-icon"
+			href="https://github.com/HyunLee103/wedding"
+			target="_blank"
+		>
+			<Github size="1.1em" strokeWidth={1} />
+		</a>
+
+		<p class="signature en">Made with ♡ by Yejin & Hyun</p>
+	</div>
 </section>
 
 <style lang="scss">
@@ -96,7 +98,7 @@
 		align-items: center;
 		background-color: $bg-color-1;
 		font-family: 'Noto Serif KR', serif;
-		padding: 1em 2em;
+		padding: 1em 2em 3.75em;
 		position: relative;
 	}
 
@@ -142,6 +144,7 @@
 
 	.guide-line,
 	.parking-title,
+	.atm-title,
 	.parking-list li {
 		color: $font-color-default;
 		font-size: 0.92rem;
@@ -192,20 +195,27 @@
 		border-top: 1px solid rgba(185, 148, 147, 0.24);
 	}
 
+	.location-footer {
+		margin-top: 2.15rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.45rem;
+	}
+
 	p.signature {
-		margin-top: 2.2rem;
+		margin-top: 0;
 		font-size: 1rem;
 	}
 
 	.github-icon {
-		margin-top: 0.2em;
 		color: $font-color-default;
 		cursor: pointer;
 	}
 
 	img.location-deco {
 		position: absolute;
-		bottom: 2.5em;
+		bottom: 4.6em;
 		right: 1.5em;
 	}
 
