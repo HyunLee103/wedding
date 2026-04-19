@@ -23,7 +23,7 @@
 		script.onload = () => {
 			const map = new naver.maps.Map('naverMap', {
 				center: new naver.maps.LatLng(37.541522, 126.997032),
-				zoom: 17
+				zoom: 15
 			});
 
 			new naver.maps.Marker({
