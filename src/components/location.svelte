@@ -1,8 +1,13 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import locationDeco from '$lib/assets/location-deco.svg';
 	import { _ } from 'svelte-i18n';
 	import { localeStore } from '../i18n.svelte';
 	import { Clipboard, Github } from '@lucide/svelte';
+	import { PUBLIC_NAVER_MAPS_API_KEY } from '$env/static/public';
+
+	const naverMapUrl = 'https://naver.me/FAPXf05C';
+	const hasNaverMapKey = Boolean(PUBLIC_NAVER_MAPS_API_KEY);
 
 	function copyAddress() {
 		navigator.clipboard
@@ -10,6 +15,33 @@
 			.then(() => alert($_('location.address_copied')))
 			.catch(() => null);
 	}
+
+	onMount(() => {
+		if (!hasNaverMapKey) return;
+
+		const script = document.createElement('script');
+		script.src = `https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${PUBLIC_NAVER_MAPS_API_KEY}`;
+		script.async = true;
+
+		script.onload = () => {
+			const map = new naver.maps.Map('naverMap', {
+				center: new naver.maps.LatLng(37.541522, 126.997032),
+				zoom: 17
+			});
+
+			new naver.maps.Marker({
+				position: new naver.maps.LatLng(37.541522, 126.997032),
+				map,
+				title: '남산 한남 웨딩 가든'
+			});
+		};
+
+		document.head.appendChild(script);
+
+		return () => {
+			script.remove();
+		};
+	});
 </script>
 
 <section class="location">
@@ -25,13 +57,13 @@
 	</button>
 
 	<div class="map">
-		<iframe
-			class="map-frame"
-			title="남산 한남 웨딩 가든 지도"
-			src="https://map.naver.com/p/entry/place/2145045060?placePath=%2Fhome"
-			loading="lazy"
-			referrerpolicy="no-referrer-when-downgrade"
-		></iframe>
+		{#if hasNaverMapKey}
+			<div id="naverMap" class="naver-map"></div>
+		{:else}
+			<a class="naver-map-link" href={naverMapUrl} target="_blank" rel="noreferrer">
+				네이버 지도에서 보기
+			</a>
+		{/if}
 	</div>
 
 	<p class="signature en">made with ♡ by Yejin & Hyun</p>
@@ -64,12 +96,25 @@
 		margin-bottom: 7em;
 	}
 
-	.map-frame {
+	.naver-map {
 		width: 100%;
 		height: 100%;
-		border: 0;
 		border-radius: 8px;
 		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	}
+
+	.naver-map-link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		border-radius: 8px;
+		background: #f4f1ec;
+		color: $primary-color;
+		font-weight: 600;
+		text-decoration: none;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 	}
 
 	p.signature {

@@ -72,7 +72,9 @@
 <section class="gallery">
 	<div class="header">
 		<h2 class="title {localeStore.locale}">{$_('gallery.title')}</h2>
-		<p class="sub-title {localeStore.locale}">{$_('gallery.sub_title')}</p>
+		{#if $_('gallery.sub_title')}
+			<p class="sub-title {localeStore.locale}">{$_('gallery.sub_title')}</p>
+		{/if}
 	</div>
 	<div id="gallery">
 		{#each photos as photo}

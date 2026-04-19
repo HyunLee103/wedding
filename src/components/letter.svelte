@@ -79,6 +79,7 @@
 
 	.sub-title {
 		color: $primary-color;
+		white-space: pre-line;
 		&.kr {
 			font-weight: 500;
 			font-size: 1rem;
@@ -92,6 +93,7 @@
 
 	p.letter {
 		text-align: center;
+		white-space: pre-line;
 		&.kr {
 			line-height: 2.3em;
 			font-size: 0.9rem;
