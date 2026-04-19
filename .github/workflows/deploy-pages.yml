@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       BASE_PATH: /wedding
-      PUBLIC_NAVER_MAPS_API_KEY: ${{ secrets.PUBLIC_NAVER_MAPS_API_KEY }}
+      PUBLIC_NAVER_MAPS_API_KEY: f28bea3kjx
     steps:
       - name: Checkout
         uses: actions/checkout@v4

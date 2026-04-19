@@ -6,7 +6,7 @@
 	import { Clipboard, Github } from '@lucide/svelte';
 	import { PUBLIC_NAVER_MAPS_API_KEY } from '$env/static/public';
 
-	const naverMapsKey = PUBLIC_NAVER_MAPS_API_KEY || 'f28bea3kjx';
+	const naverMapsKey = PUBLIC_NAVER_MAPS_API_KEY;
 
 	function copyAddress() {
 		navigator.clipboard
