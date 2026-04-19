@@ -3,7 +3,7 @@
 	import locationDeco from '$lib/assets/location-deco.svg';
 	import { _ } from 'svelte-i18n';
 	import { localeStore } from '../i18n.svelte';
-	import { Clipboard, Github } from '@lucide/svelte';
+	import { Clipboard } from '@lucide/svelte';
 	import { PUBLIC_NAVER_MAPS_API_KEY } from '$env/static/public';
 
 	const naverMapsKey = PUBLIC_NAVER_MAPS_API_KEY;
@@ -77,18 +77,6 @@
 	</div>
 
 	<img class="location-deco" src={locationDeco} alt="" />
-
-	<div class="location-footer">
-		<a
-			class="github-icon"
-			href="https://github.com/HyunLee103/wedding"
-			target="_blank"
-		>
-			<Github size="1.1em" strokeWidth={1} />
-		</a>
-
-		<p class="signature en">Made with ♡ by Yejin & Hyun</p>
-	</div>
 </section>
 
 <style lang="scss">
@@ -98,7 +86,7 @@
 		align-items: center;
 		background-color: $bg-color-1;
 		font-family: 'Noto Serif KR', serif;
-		padding: 1em 2em 3.75em;
+		padding: 1em 2em 2.7em;
 		position: relative;
 	}
 
@@ -195,35 +183,15 @@
 		border-top: 1px solid rgba(185, 148, 147, 0.24);
 	}
 
-	.location-footer {
-		margin-top: 2.15rem;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 0.45rem;
-		position: relative;
-		z-index: 1;
-	}
-
-	p.signature {
-		margin-top: 0;
-		font-size: 1rem;
-	}
-
-	.github-icon {
-		color: $font-color-default;
-		cursor: pointer;
-	}
-
 	img.location-deco {
 		position: absolute;
-		bottom: 4.6em;
+		bottom: 2.3em;
 		right: 1.5em;
 	}
 
 	@media (max-width: 640px) {
 		section.location {
-			padding: 1em 1.25em 3.5em;
+			padding: 1em 1.25em 2.85em;
 		}
 
 		.location-guide {
