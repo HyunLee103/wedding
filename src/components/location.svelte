@@ -44,9 +44,9 @@
 <section class="location">
 	<h2 class="title {localeStore.locale}">{$_('location.title')}</h2>
 
-	<p class="venue en">남산 한남 웨딩 가든</p>
+	<p class="venue">남산 한남 웨딩 가든</p>
 
-	<button class="copy-address en" onclick={copyAddress}>
+	<button class="copy-address" onclick={copyAddress}>
 		<span class="clipboard-icon">
 			<Clipboard size="1.1em" />
 		</span>
@@ -70,6 +70,10 @@
 				<li>삼호민영주차장 (서울 용산구 회나무로 85 삼호주차장)</li>
 			</ul>
 		</div>
+		<div class="atm-list">
+			<p class="atm-title">ATM</p>
+			<p class="guide-line">예식장 내 ATM이 없어 하얏트 호텔 본관 ATM 이용을 부탁드립니다.</p>
+		</div>
 	</div>
 
 	<p class="signature en">Made with ♡ by Yejin & Hyun</p>
@@ -91,8 +95,26 @@
 		flex-direction: column;
 		align-items: center;
 		background-color: $bg-color-1;
+		font-family: 'Noto Serif KR', serif;
 		padding: 1em 2em;
 		position: relative;
+	}
+
+	.venue {
+		margin-top: 0.2rem;
+		font-size: 1.05rem;
+		line-height: 1.6;
+		text-align: center;
+	}
+
+	.copy-address {
+		margin-top: 0.25rem;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.45rem;
+		font-size: 0.95rem;
+		line-height: 1.6;
+		text-align: center;
 	}
 
 	.map {
@@ -148,7 +170,8 @@
 		margin-top: 0.75rem;
 	}
 
-	.parking-title {
+	.parking-title,
+	.atm-title {
 		font-weight: 700;
 		color: $primary-color-dark;
 		margin-bottom: 0.35rem;
@@ -161,6 +184,12 @@
 
 	.parking-list li + li {
 		margin-top: 0.35rem;
+	}
+
+	.atm-list {
+		margin-top: 0.85rem;
+		padding-top: 0.85rem;
+		border-top: 1px solid rgba(185, 148, 147, 0.24);
 	}
 
 	p.signature {
@@ -189,9 +218,18 @@
 			padding: 1rem 0.95rem;
 		}
 
+		.venue {
+			font-size: 1rem;
+		}
+
+		.copy-address {
+			font-size: 0.9rem;
+		}
+
 		.guide-line,
 		.parking-title,
-		.parking-list li {
+		.parking-list li,
+		.atm-title {
 			font-size: 0.88rem;
 			line-height: 1.7;
 		}

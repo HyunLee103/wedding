@@ -2,7 +2,7 @@
 	import { _ } from 'svelte-i18n';
 	import { localeStore } from '../i18n.svelte';
 	import rsvpDeco from '$lib/assets/rsvp-deco.svg';
-	import { Phone, Copy, CreditCard } from '@lucide/svelte';
+	import { Copy, CreditCard } from '@lucide/svelte';
 	import locationTopWave from '$lib/assets/location-top-wave.svg';
 
 	let groomOpen = $state(false);
@@ -41,13 +41,6 @@
 					<div class="person">
 						<p class="name">신랑 {$_('gift_info.groom.name')}</p>
 
-						<div class="row center">
-							<Phone size="16" />
-							<a href={`tel:${$_('gift_info.groom.phone')}`}>
-								{$_('gift_info.groom.phone')}
-							</a>
-						</div>
-
 						<div class="row account">
 							<CreditCard size="16" />
 							<span>
@@ -68,12 +61,6 @@
 					<!-- 신랑 아버지 -->
 					<div class="person">
 						<p class="name">혼주 {$_('gift_info.groom_parents.father.name')}</p>
-						<div class="row center">
-							<Phone size="16" />
-							<a href={`tel:${$_('gift_info.groom_parents.father.phone')}`}>
-								{$_('gift_info.groom_parents.father.phone')}
-							</a>
-						</div>
 						<div class="row account">
 							<CreditCard size="16" />
 							<span>
@@ -100,12 +87,6 @@
 					<!-- 신랑 어머니 -->
 					<div class="person">
 						<p class="name">혼주 {$_('gift_info.groom_parents.mother.name')}</p>
-						<div class="row center">
-							<Phone size="16" />
-							<a href={`tel:${$_('gift_info.groom_parents.mother.phone')}`}>
-								{$_('gift_info.groom_parents.mother.phone')}
-							</a>
-						</div>
 						<div class="row account">
 							<CreditCard size="16" />
 							<span>
@@ -147,13 +128,6 @@
 					<div class="person">
 						<p class="name">신부 {$_('gift_info.bride.name')}</p>
 
-						<div class="row center">
-							<Phone size="16" />
-							<a href={`tel:${$_('gift_info.bride.phone')}`}>
-								{$_('gift_info.bride.phone')}
-							</a>
-						</div>
-
 						<div class="row account">
 							<CreditCard size="16" />
 							<span>
@@ -173,12 +147,6 @@
 					<!-- 신부 어머니 -->
 					<div class="person">
 						<p class="name">혼주 {$_('gift_info.bride_parents.mother.name')}</p>
-						<div class="row center">
-							<Phone size="16" />
-							<a href={`tel:${$_('gift_info.bride_parents.mother.phone')}`}>
-								{$_('gift_info.bride_parents.mother.phone')}
-							</a>
-						</div>
 						<div class="row account">
 							<CreditCard size="16" />
 							<span>
@@ -230,6 +198,7 @@ section.gift {
 	padding: 3em 1.2em;
 	max-width: $content-max-width;
 	margin: 0 auto;
+	font-family: 'Noto Serif KR', serif;
 }
 
 .group {

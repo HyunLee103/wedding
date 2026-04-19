@@ -8,6 +8,6 @@
 
 <Cover />
 <Letter />
+<Location />
 <Gallery />
 <GiftInfo />
-<Location />
