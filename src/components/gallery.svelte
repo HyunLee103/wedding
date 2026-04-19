@@ -137,6 +137,10 @@
 		object-fit: cover;
 	}
 
+	.slide:nth-child(4) img.thumbnail {
+		object-position: center 28%;
+	}
+
 	.slide:nth-child(1),
 	.slide:nth-child(2),
 	.slide:nth-child(3),
