@@ -57,6 +57,21 @@
 		<div id="naverMap" class="naver-map"></div>
 	</div>
 
+	<div class="location-guide kr">
+		<p class="guide-line">
+			예식장 내 주차 공간이 마련되어 있지 않아 대중교통 이용 부탁드립니다.
+		</p>
+		<p class="guide-line"><strong>셔틀</strong> 한강진역 2번 출구 앞 탑승</p>
+		<div class="parking-list">
+			<p class="parking-title">인근 주차장</p>
+			<ul>
+				<li>그랜드 하얏트 서울 주차장 (서울 용산구 한남동 747-7)</li>
+				<li>이태원2동 공영 주차장 (서울 용산구 회나무로 55)</li>
+				<li>삼호민영주차장 (서울 용산구 회나무로 85 삼호주차장)</li>
+			</ul>
+		</div>
+	</div>
+
 	<p class="signature en">made with ♡ by Yejin & Hyun</p>
 
 	<a
@@ -84,7 +99,7 @@
 		margin-top: 2em;
 		width: 100%;
 		height: 16em;
-		margin-bottom: 7em;
+		margin-bottom: 1.5em;
 	}
 
 	.naver-map {
@@ -94,7 +109,58 @@
 		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 	}
 
+	.location-guide {
+		width: 100%;
+		padding: 1.1rem 1rem;
+		border-radius: 14px;
+		background: rgba(255, 255, 255, 0.72);
+		box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+		backdrop-filter: blur(6px);
+	}
+
+	.guide-line,
+	.parking-title,
+	.parking-list li {
+		color: $font-color-default;
+		font-size: 0.92rem;
+		line-height: 1.75;
+		word-break: keep-all;
+	}
+
+	.guide-line + .guide-line {
+		margin-top: 0.35rem;
+	}
+
+	.guide-line strong {
+		display: inline-block;
+		margin-right: 0.35rem;
+		color: $primary-color-dark;
+		font-weight: 700;
+	}
+
+	.parking-list {
+		margin-top: 0.75rem;
+		padding-top: 0.75rem;
+		border-top: 1px solid rgba(185, 148, 147, 0.24);
+	}
+
+	.parking-title {
+		font-weight: 700;
+		color: $primary-color-dark;
+		margin-bottom: 0.35rem;
+	}
+
+	.parking-list ul {
+		margin: 0;
+		padding-left: 1.1rem;
+	}
+
+	.parking-list li + li {
+		margin-top: 0.35rem;
+	}
+
 	p.signature {
+		margin-top: 2.2rem;
 		font-size: 1rem;
 	}
 
@@ -108,5 +174,22 @@
 		position: absolute;
 		bottom: 2.5em;
 		right: 1.5em;
+	}
+
+	@media (max-width: 640px) {
+		section.location {
+			padding: 1em 1.25em;
+		}
+
+		.location-guide {
+			padding: 1rem 0.95rem;
+		}
+
+		.guide-line,
+		.parking-title,
+		.parking-list li {
+			font-size: 0.88rem;
+			line-height: 1.7;
+		}
 	}
 </style>
